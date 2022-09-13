@@ -1,0 +1,31 @@
+<h2>Lista Usuarios</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Id usuario</th>
+            <th>Usuario</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Rol</th>
+            <th>Nombre Completo</th>
+            <th>Avatar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios">
+            <td>{{usuario.id}}</td>
+            <td>{{usuario.id_usuario}}</td>
+            <td>{{usuario.usuario}}</td>
+            <td>{{usuario.email}}</td>
+            <td>{{usuario.password}}</td>
+            <td>{{usuario.rol}}</td>
+            <td>{{usuario.fullName}}</td>
+            <td>{{usuario.avatar}}</td>
+            <td>
+                <button (click)="actualizarUsuario(usuario.id)" class="btn btn-info">Actualizar</button>
+                <button (click)="eliminarUsuario(usuario.id)" class="btn btn-danger" style="margin-left:10px;">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

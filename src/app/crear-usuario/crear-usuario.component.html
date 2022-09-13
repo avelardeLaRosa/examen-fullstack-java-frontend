@@ -1,0 +1,29 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registrar Usuario</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Id Usuario:</label>
+            <input type="text" class="form-control" id="id_usuario" [(ngModel)] = "usuario.id_usuario" name="id_usuario"/>
+
+            <label>Usuario:</label>
+            <input type="text" class="form-control" id="usuario" [(ngModel)] = "usuario.usuario" name="usuario"/>
+
+            <label>Email:</label>
+            <input type="text" class="form-control" id="email" [(ngModel)] = "usuario.email" name="email"/>
+
+            <label>Password:</label>
+            <input type="text" class="form-control" id="password" [(ngModel)] = "usuario.password" name="password"/>
+
+            <label>Rol:</label>
+            <input type="text" class="form-control" id="rol" [(ngModel)] = "usuario.rol" name="rol"/>
+
+            <label>Nombre Completo:</label>
+            <input type="text" class="form-control" id="fullName" [(ngModel)] = "usuario.fullName" name="fullName"/>
+            
+            <label>Avatar:</label>
+            <input type="text" class="form-control" id="avatar" [(ngModel)] = "usuario.avatar" name="avatar"/>
+        </div>
+
+        <button class="btn btn-success">Registrar</button>
+    </form>
+</div>
